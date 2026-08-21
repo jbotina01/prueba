@@ -1,41 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset = "UTF -8">
-    <META name="viewport" content="width=device-width, initial-scale=1.0"
-    <title>MI PIMERA APP
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página construida con HTML y CSS">
+    <title>Programación Avanzada</title>
 
-    </title>
+    <!-- Conexión con el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- cuerpo o esctructura de html -->
-     <!-- LA P PARA TEXTO -->
-    <p>Bienvenidos al curso de programación avanzada</p>
-    <!-- LA A PARA HIPERVINCULOS -->
-     <br>
-    <a href="https://www.unicesmag.edu.co/">Pagina CESMAG</a>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbEBXYh4_22WeX_8WMjGQqlGuScjXweA_eu3hZF4EL1w&s=10" alt="Logo">
-    <br>
-    <br>
-    <input type="text">
-    <br>
-    5.<!-- sirve para salto de linea -->
-     <br>
-     <!-- encabezados y parrafos -->
-     <h1>TITULO PRINCIPAL🔥</h1>
-     <H2>TITULO DE SECCIONES 😒</H2>
-     <H3>SUBSECCIONES😁</H3>
-     <H4>nivel 4</H4>
-     <h5>nivel 5</h5>
-     <h6>nivel 6</h6>
 
-     6.<!--eiquetas de dar significado a un texto NEGRITAS, SUBRAYADOS ETC  -->
-     <!-- negrita -->
-     <p>HTML es <strong>fundamental</strong> para el desarrollo web</p>
-     <!-- para cursiva -->
-     <p>Es <em>muy importante</em> cerrar correctamente las etiquetas</p>
-     <!-- para marcado -->
-     <p>el tema evaluado sera <mark>FORMULARIOS HTML</mark></p>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado" id="inicio">
+        <a class="logo" href="#inicio">
+            <span>&lt;/&gt;</span>
+            Programación Avanzada
+        </a>
+
+        <nav class="navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#temas">Temas</a>
+            <a href="#estudiantes">Estudiantes</a>
+            <a href="#registro">Registro</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="portada">
+            <div class="portada-contenido">
+                <p class="etiqueta">Clase práctica · HTML y CSS</p>
+
+                <h1>
+                    Aprende desarrollo web construyendo proyectos reales
+                </h1>
+
+                <p>
+                    En esta página encontrarás ejemplos de etiquetas semánticas,
+                    tarjetas, listas, tablas, formularios y diseño adaptable.
+                </p>
+
+                <div class="acciones">
+                    <a class="boton boton-principal" href="#temas">
+                        Explorar temas
+                    </a>
+
+                    <a class="boton boton-secundario" href="#registro">
+                        Registrarme
+                    </a>
+                </div>
+            </div>
+
+            <div class="ilustracion">
+                <div class="ventana-codigo">
+                    <div class="puntos">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <code>&lt;h1&gt;Hola, web&lt;/h1&gt;</code>
+                    <code>&lt;p&gt;Aprender haciendo&lt;/p&gt;</code>
+                    <code>.boton { color: white; }</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEMAS -->
+        <section class="seccion" id="temas">
+            <div class="titulo-seccion">
+                <p class="etiqueta">Contenido de la asignatura</p>
+                <h2>Temas principales</h2>
+
+                <p>
+                    Cada tecnología cumple una función dentro de una aplicación web.
+                </p>
+            </div>
+
+            <div class="rejilla-tarjetas">
+
+                <article class="tarjeta">
+                    <span class="icono html">H</span>
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Define la estructura y el significado del contenido.
+                    </p>
+
+                    <ul>
+                        <li>Encabezados y párrafos</li>
+                        <li>Listas y enlaces</li>
+                        <li>Tablas y formularios</li>
+                    </ul>
+                </article>
+
+                <article class="tarjeta destacada">
+                    <span class="icono css">C</span>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Controla colores, espacios, tamaños y distribución.
+                    </p>
+
+                    <ul>
+                        <li>Selectores</li>
+                        <li>Modelo de caja</li>
+                        <li>Flexbox y Grid</li>
+                    </ul>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono git">G</span>
+
+                    <h3>Git</h3>
+
+                    <p>
+                        Registra la historia y los cambios del proyecto.
+                    </p>
+
+                    <ol>
+                        <li>Agregar cambios</li>
+                        <li>Crear un commit</li>
+                        <li>Publicar en GitHub</li>
+                    </ol>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="seccion seccion-gris" id="estudiantes">
+            <div class="titulo-seccion">
+                <p class="etiqueta">Ejemplo de tabla</p>
+                <h2>Avance de estudiantes</h2>
+            </div>
+
+            <div class="contenedor-tabla">
+                <table>
+                    <caption>Seguimiento de actividades</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Tema</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Ana Torres</td>
+                            <td>HTML</td>
+                            <td>
+                                <span class="estado completo">
+                                    Completo
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>002</td>
+                            <td>Carlos Pérez</td>
+                            <td>CSS</td>
+                            <td>
+                                <span class="estado proceso">
+                                    En proceso
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>003</td>
+                            <td>Laura Díaz</td>
+                            <td>Git</td>
+                            <td>
+                                <span class="estado completo">
+                                    Completo
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="seccion" id="registro">
+            <div class="titulo-seccion">
+                <p class="etiqueta">Ejemplo de formulario</p>
+                <h2>Registro de estudiante</h2>
+
+                <p>
+                    Los atributos HTML ayudan a capturar datos de forma organizada.
+                </p>
+            </div>
+
+            <form class="formulario" action="#registro" method="get">
+                <fieldset>
+                    <legend>Información personal</legend>
+
+                    <div class="fila-formulario">
+
+                        <label for="nombre">
+                            Nombre completo
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Escriba su nombre"
+                                required
+                            >
+                        </label>
+
+                        <label for="correo">
+                            Correo electrónico
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="correo@ejemplo.com"
+                                required
+                            >
+                        </label>
+
+                    </div>
+
+                    <div class="fila-formulario">
+
+                        <label for="programa">
+                            Programa académico
+
+                            <select id="programa" name="programa" required>
+                                <option value="">
+                                    Seleccione una opción
+                                </option>
+
+                                <option value="sistemas">
+                                    Ingeniería de Sistemas
+                                </option>
+
+                                <option value="informatica">
+                                    Licenciatura en Informática
+                                </option>
+                            </select>
+                        </label>
+
+                        <label for="fecha">
+                            Fecha de nacimiento
+
+                            <input
+                                type="date"
+                                id="fecha"
+                                name="fecha"
+                            >
+                        </label>
+
+                    </div>
+
+                    <label for="mensaje">
+                        ¿Qué espera aprender?
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Escriba su respuesta"
+                        ></textarea>
+                    </label>
+
+                    <label class="aceptar" for="terminos">
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            name="terminos"
+                            required
+                        >
+
+                        Acepto las condiciones de la actividad.
+                    </label>
+
+                    <div class="acciones-formulario">
+                        <button type="submit">
+                            Guardar registro
+                        </button>
+
+                        <button class="boton-limpiar" type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- ELEMENTO DESPLEGABLE -->
+        <section class="pregunta">
+            <details>
+                <summary>
+                    ¿Cuál es la diferencia entre HTML y CSS?
+                </summary>
+
+                <p>
+                    HTML define qué contenido existe y qué significa.
+                    CSS define cómo se presenta ese contenido en la pantalla.
+                </p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div>
+            <strong>Programación Avanzada</strong>
+            <p>Práctica de HTML, CSS y Git.</p>
+        </div>
+
+        <address>
+            Universidad de Nariño<br>
+            San Juan de Pasto, Colombia
+        </address>
+    </footer>
 
 </body>
 </html>
